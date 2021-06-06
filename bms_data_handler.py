@@ -1,5 +1,4 @@
 import random
-import numpy
 import report_vitals
 
 bms_attribute_limits = {'TEMPERATURE': [0, 45],
@@ -11,7 +10,10 @@ def random_number_generator(min,max):
   if isinstance((min+max) , int):
     return random.sample(range(min, max), 15)
   elif isinstance((min+max) , float):
-    return numpy.random.uniform(min, max, 15)    
+    random_floats=[]
+    for i in range(15):
+        random_floats.append(random.uniform(min,max))
+    return random_floats   
 
 def process_vitals(battery_parameters,alert_type):
     validate_vitals(battery_parameters,alert_type)    
