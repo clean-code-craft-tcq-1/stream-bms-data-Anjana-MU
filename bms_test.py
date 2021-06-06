@@ -30,5 +30,5 @@ class test_battery_current_ranges(unittest.TestCase):
       self.assertTrue('Battery parameter value is missing' in str(context.exception))               
 
 
-if __name__ == '__main__':
-  unittest.main()
+#if __name__ == '__main__':
+  #unittest.main()
