@@ -17,7 +17,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8
           pip install coverage
-          pip install numpy
           pip install pyinstaller
       - name: Lint with flake8
         run: |
@@ -27,7 +26,7 @@ jobs:
           flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
       - name: Run and collect coverage
         run: |
-          coverage run --branch bms_main.py
+          coverage run --branch ./sender/bms_main.py
           coverage html
       - name: Upload coverage
         uses: actions/upload-artifact@v2
