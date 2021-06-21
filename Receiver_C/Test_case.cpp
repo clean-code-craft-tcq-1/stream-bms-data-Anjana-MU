@@ -58,7 +58,7 @@ TEST_CASE("Positive_case: Data storage validation")
 {	
     int retVal , idx;
     double min , max , sma ;
-    char par_name[50] ,  buffer[16][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4"}; 	
+    const char par_name[50] ,  buffer[16][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4"}; 	
 	for(idx = 0 ; idx < 16 ; idx++)
 	{
 		retVal = data_Storage( &buffer[idx] , &min , &max , &sma , par_name);
@@ -82,7 +82,7 @@ TEST_CASE("Negetive_case: Data storage validation")
 {	
 	int retVal , idx;
     double min , max , sma ;
-    char par_name[50] ,  buffer[17][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
+    const char par_name[50] ,  buffer[17][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
 	for(idx = 0 ; idx < 17 ; idx++)
 	{
 		retVal = data_Storage( &buffer[idx] , &min , &max , &sma , par_name);
