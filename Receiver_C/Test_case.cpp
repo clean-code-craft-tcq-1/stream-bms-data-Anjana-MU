@@ -74,7 +74,7 @@ TEST_CASE("Positive_case: Data storage validation")
 	REQUIRE (min == 1.000000);
 	REQUIRE (max == 96.000000);
 	REQUIRE (sma == 5.400000);
-	REQUIRE (strcmp(par_name , &buffer[0]) == 0) ;		  
+	REQUIRE (strcmp(par_name , (char *)&buffer[0]) == 0) ;		  
 }
 
 
