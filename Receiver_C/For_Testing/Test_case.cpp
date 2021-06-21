@@ -2,11 +2,11 @@
 #include "catch.hpp"
 
 #include "Test_case.h"
-#include "./Receiver/Common_Header.h"
-#include "./Receiver/Data_Reader.h"
-#include "./Receiver/Data_Analyzer.h"
-#include "./Receiver/Output_Handler.h"
-#include "./Receiver/Receiver_Main.h"
+#include "../Common_Header.h"
+#include "../Data_Reader.h"
+#include "../Data_Analyzer.h"
+#include "../Output_Handler.h"
+#include "../Receiver_Main.h"
 
 TEST_CASE("Positive_case: Calculate SMA on given array") 
 {
