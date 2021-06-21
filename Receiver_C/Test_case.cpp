@@ -1,3 +1,7 @@
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
+#include "test/catch.hpp"
+
 #include "Test_case.h"
 #include "Common_Header.h"
 #include "Data_Reader.h"
