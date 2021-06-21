@@ -61,7 +61,7 @@ TEST_CASE("Positive_case: Data storage validation")
 {	
     int retVal , idx;
     double min , max , sma ;
-    const char par_name[50] ,  buffer[16][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4"}; 	
+    char par_name[50] ,  buffer[16][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4"}; 	
 	for(idx = 0 ; idx < 16 ; idx++)
 	{
 		retVal = data_Storage( (char *)&buffer[idx] , &min , &max , &sma , par_name);
@@ -70,7 +70,11 @@ TEST_CASE("Positive_case: Data storage validation")
 			break;
 		}
 	}
-	REQUIRE( (retVal == OK) && (min == 1.000000) && (max == 96.000000) && (sma == 5.400000) && (strcmp(par_name , &buffer[0]) == 0) );		  
+	REQUIRE( (retVal == OK));
+	REQUIRE (min == 1.000000);
+	REQUIRE (max == 96.000000);
+	REQUIRE (sma == 5.400000);
+	REQUIRE (strcmp(par_name , &buffer[0]) == 0) ;		  
 }
 
 
