@@ -71,9 +71,9 @@ TEST_CASE("Positive_case: Data storage validation")
 		}
 	}
 	REQUIRE( (retVal == OK));
-	REQUIRE (min == 1.000000);
-	REQUIRE (max == 96.000000);
-	REQUIRE (sma == 5.400000);
+	REQUIRE (min == 1.0000000000);
+	REQUIRE (max == 96.0000000000);
+	REQUIRE (sma == 5.4000000954);
 	REQUIRE (strcmp(par_name , (char *)&buffer[0]) == 0) ;		  
 }
 
@@ -84,15 +84,15 @@ TEST_CASE("Negetive_case: Data storage validation")
 	retVal = data_Storage( 0 , 0 , 0 , 0 , 0);
 	REQUIRE(retVal == NOT_OK);		  
 }
-/*
+
 TEST_CASE("Negetive_case: Data storage validation") 
 {	
 	int retVal , idx;
     double min , max , sma ;
-    const char par_name[50] ,  buffer[17][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
+    char par_name[50] ,  buffer[17][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
 	for(idx = 0 ; idx < 17 ; idx++)
 	{
-		retVal = data_Storage( &buffer[idx] , &min , &max , &sma , par_name);
+		retVal = data_Storage( (char *)&buffer[idx] , &min , &max , &sma , par_name);
 		if(retVal == NOT_OK)
 		{
 			break;
@@ -105,10 +105,10 @@ TEST_CASE("Negetive_case: Data storage validation")
 {	
 	int retVal , idx;
     double min , max , sma ;
-    char par_name[50] ,  buffer[17][5] = {"55" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
+    par_name[50] ,  buffer[17][5] = {"55" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
 	for(idx = 0 ; idx < 17 ; idx++)
 	{
-		retVal = data_Storage( &buffer[idx] , &min , &max , &sma , par_name);
+		retVal = data_Storage( (char *)&buffer[idx] , &min , &max , &sma , par_name);
 		if(retVal == NOT_OK)
 		{
 			break;
@@ -116,7 +116,7 @@ TEST_CASE("Negetive_case: Data storage validation")
 	}
 	REQUIRE(retVal == NOT_OK);		  
 }
-*/
+
 TEST_CASE("Test data collector : Fake function") 
 {	
 	int retVal; 
