@@ -78,14 +78,14 @@ TEST_CASE("Positive_case: Data storage validation")
 }
 
 
-TEST_CASE("Negetive_case: Data storage validation") 
+TEST_CASE("Negetive_case 1: Data storage validation") 
 {	
     int retVal ; 	
 	retVal = data_Storage( 0 , 0 , 0 , 0 , 0);
 	REQUIRE(retVal == NOT_OK);		  
 }
 
-TEST_CASE("Negetive_case: Data storage validation") 
+TEST_CASE("Negetive_case 2: Data storage validation") 
 {	
 	int retVal , idx;
     double min , max , sma ;
