@@ -14,7 +14,7 @@ jobs:
       run: sudo apt-get install -y gcovr
 
     - name: build
-      run: g++ -I ./Receiver_C/For_Testing  -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./Receiver_C/*.c*
+      run: g++ -I ./Receiver_C/For_Testing  -finstrument-functions-exclude-file-list=./Receiver_C/*.cpp -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./Receiver_C/*.c*
       
     - name: run
       run: ./testchecker
