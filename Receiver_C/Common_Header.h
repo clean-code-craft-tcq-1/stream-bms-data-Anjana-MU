@@ -15,8 +15,5 @@
 
 #define MAX_STREAM_DATA_NUMBERS   15
 
-#ifndef TEST_MODE_ON
-#define TEST_MODE_ON  FALSE
-#endif
 
 #endif
