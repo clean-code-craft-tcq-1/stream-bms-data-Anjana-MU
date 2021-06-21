@@ -118,7 +118,8 @@ TEST_CASE("Test data collector : Fake function")
 	int retVal; 
     char update_buff[15] , exp_buffer[15] =  "TEST_PATTERN" ; 
 	retVal = Data_Collector(update_buff , 15);
-	REQUIRE((strcmp(update_buff , exp_buffer) == 0) && (retVal == OK));		  
+	REQUIRE((strcmp(update_buff , exp_buffer) == 0));
+	REQUIRE( (retVal == OK));		  
 }
 
 TEST_CASE("Positive case : Test Out Buffer fillup function") 
