@@ -14,7 +14,8 @@ TEST_CASE("Positive_case: Calculate SMA on given array")
 	double expected_SMA = 5.000000;
     int retVal ; 	
 	retVal = Calculate_SMA( data , (sizeof(data)/(sizeof(data[0]))) , &derived_SMA );
-	REQUIRE( (retVal == OK) && (derived_SMA == expected_SMA));		  
+	REQUIRE( (retVal == OK) );
+	REQUIRE((derived_SMA == expected_SMA));		  
 }
 
 TEST_CASE("Negetive_case: Calculate SMA on given array") 
@@ -30,7 +31,9 @@ TEST_CASE("Positive_case: Find min and max on given array")
 	double min , max , data[5] = {1.0,3.0,5.0,7.0,9.0};	
     int retVal ; 	
 	retVal = Min_Max_finder( data , (sizeof(data)/(sizeof(data[0]))) , &min , &max );
-	REQUIRE( (retVal == OK) && (min == 1.000000) && ((max == 9.000000)));		  
+	REQUIRE( (retVal == OK) );
+	REQUIRE((min == 1.000000));
+	REQUIRE((max == 9.000000));		  
 }
 
 TEST_CASE("Negetive_case: Find min and max on given array") 
