@@ -137,6 +137,7 @@ TEST_CASE("Negetive case : Test Out Buffer fillup function")
 	char update_buff[100], par_name[20] = "TEST";
 	char exp_buff[100] = "Streaming Parameter: TEST Min_Value: 0.000000 Max_Value: 5.000000 SMA: 2.200000";
 	Output_Buff_Fillup(update_buff , 0, 0, &sma , par_name);
+	pritnf("%s" ,update_buff );
 	REQUIRE((strcmp(update_buff , exp_buff) == 1));		  
 }
 
