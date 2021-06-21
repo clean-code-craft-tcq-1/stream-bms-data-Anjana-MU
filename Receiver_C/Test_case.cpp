@@ -53,7 +53,7 @@ TEST_CASE("Test the Data analyzer function")
 	}
 	REQUIRE(Result == OK);		  
 }
-
+/*
 TEST_CASE("Positive_case: Data storage validation") 
 {	
     int retVal , idx;
@@ -70,14 +70,14 @@ TEST_CASE("Positive_case: Data storage validation")
 	REQUIRE( (retVal == OK) && (min == 1.000000) && (max == 96.000000) && (sma == 5.400000) && (strcmp(par_name , &buffer[0]) == 0) );		  
 }
 
-
+*/
 TEST_CASE("Negetive_case: Data storage validation") 
 {	
     int retVal ; 	
 	retVal = data_Storage( 0 , 0 , 0 , 0 , 0);
 	REQUIRE(retVal == NOT_OK);		  
 }
-
+/*
 TEST_CASE("Negetive_case: Data storage validation") 
 {	
 	int retVal , idx;
@@ -109,7 +109,7 @@ TEST_CASE("Negetive_case: Data storage validation")
 	}
 	REQUIRE(retVal == NOT_OK);		  
 }
-
+*/
 TEST_CASE("Test data collector : Fake function") 
 {	
 	int retVal; 
@@ -148,7 +148,7 @@ TEST_CASE("Negetive case : Test UI control")
 {	
 	int retVal; 
     char buffer[15] =  "TEST_MSG" ; 
-	retVal = Msg_Handler(10 , buffer);
+	retVal = Msg_Handler((send_type_en)10 , buffer);
 	REQUIRE(retVal == NOT_OK);		  
 }
 
