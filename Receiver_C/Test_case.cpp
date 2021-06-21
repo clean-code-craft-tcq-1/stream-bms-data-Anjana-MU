@@ -105,7 +105,7 @@ TEST_CASE("Negetive_case: Data storage validation")
 {	
 	int retVal , idx;
     double min , max , sma ;
-    par_name[50] ,  buffer[17][5] = {"55" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
+    char par_name[50] ,  buffer[17][5] = {"55" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4","6"}; 	
 	for(idx = 0 ; idx < 17 ; idx++)
 	{
 		retVal = data_Storage( (char *)&buffer[idx] , &min , &max , &sma , par_name);
