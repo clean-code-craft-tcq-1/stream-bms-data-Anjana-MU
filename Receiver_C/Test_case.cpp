@@ -56,7 +56,7 @@ TEST_CASE("Test the Data analyzer function")
 	}
 	REQUIRE(Result == OK);		  
 }
-/*
+
 TEST_CASE("Positive_case: Data storage validation") 
 {	
     int retVal , idx;
@@ -64,7 +64,7 @@ TEST_CASE("Positive_case: Data storage validation")
     const char par_name[50] ,  buffer[16][5] = {"gg" ,"1","2","3","6","6","7","54","96","74","65","8","5","4","6","4"}; 	
 	for(idx = 0 ; idx < 16 ; idx++)
 	{
-		retVal = data_Storage( &buffer[idx] , &min , &max , &sma , par_name);
+		retVal = data_Storage( (char *)&buffer[idx] , &min , &max , &sma , par_name);
 		if(retVal == NOT_OK)
 		{
 			break;
@@ -73,7 +73,7 @@ TEST_CASE("Positive_case: Data storage validation")
 	REQUIRE( (retVal == OK) && (min == 1.000000) && (max == 96.000000) && (sma == 5.400000) && (strcmp(par_name , &buffer[0]) == 0) );		  
 }
 
-*/
+
 TEST_CASE("Negetive_case: Data storage validation") 
 {	
     int retVal ; 	
