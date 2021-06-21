@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build
-      run: gcc -I ./Receiver_C/For_Actual -Wall -Wextra -o Receive_exec ./Receiver_C/*.c
+      run: g++ -I ./Receiver_C/For_Actual -Wall -Wextra -o Receive_exec ./Receiver_C/*.c
     - uses: actions/setup-python@v2
         with:
           python-version: '3.9'
