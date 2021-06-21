@@ -4,6 +4,7 @@
 #include "stdio.h"
 #include <stdlib.h>
 #include "string.h"
+#include "Test_case.h"
 
 #define OK		0x01
 #define NOT_OK	0x00
@@ -14,8 +15,8 @@
 
 #define MAX_STREAM_DATA_NUMBERS   15
 
-//#ifndef TEST_MODE_ON
-//#define TEST_MODE_ON  FALSE
-//#endif
+#ifndef TEST_MODE_ON
+#define TEST_MODE_ON  FALSE
+#endif
 
 #endif
